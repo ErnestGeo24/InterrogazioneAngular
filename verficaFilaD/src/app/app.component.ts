@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  array = new Array<string>()
   end:string
   macchina(colore:HTMLInputElement,porte:HTMLInputElement,cambio:HTMLInputElement):boolean{
     this.end = 'Colore ' + colore.value + 'Porte' + porte.value + 'Cambio' + cambio.value
-    console.log(this.end)
+    this.array.push(this.end)
+    for (let i of this.array) {
+      console.log(i)
+    }
     return false
   }
 }
