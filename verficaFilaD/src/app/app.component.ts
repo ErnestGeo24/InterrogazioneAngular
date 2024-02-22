@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   end:string
-  macchina()
+  macchina(colore:HTMLInputElement,porte:HTMLInputElement,cambio:HTMLInputElement):boolean{
+    this.end = 'Colore ' + colore.value + 'Porte' + porte.value + 'Cambio' + cambio.value
+    console.log(this.end)
+    return false
+  }
 }
